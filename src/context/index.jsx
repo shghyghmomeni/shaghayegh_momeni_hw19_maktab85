@@ -1,17 +1,13 @@
-import React from "react";
-// import { useReducer } from "react";
-// import { ExpensesReducer } from "../reducer";
+import { createContext, useReducer } from "react";
+export const ExpensesContext = createContext();
 
-const ExpensesContext = React.createContext();
+const ExpensesContextProvider = (props) => {
+  const [state, dispatch] = useReducer(ExpensesReducer, []);
+  return (
+    <ExpensesContext.Provider value={{ state, dispatch }}>
+      {props.children}
+    </ExpensesContext.Provider>
+  );
+};
 
-// function ExpensesContextProvider({ children }) {
-//   const [ExpensesList, setExpensesList] = useReducer(ExpensesReducer, []);
-//   return (
-//     <ExpensesContext.Provider value={{ ExpensesList, setExpensesList }}>
-//       {children}
-//     </ExpensesContext.Provider>
-//   );
-// }
-// export default ExpensesContextProvider;
-
-export default ExpensesContext;
+export default ExpensesContextProvider;
