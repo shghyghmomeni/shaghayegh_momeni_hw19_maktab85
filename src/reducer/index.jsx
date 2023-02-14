@@ -1,12 +1,3 @@
-import axios from "axios";
-
-// const fetchExpenses = () =>
-//   axios
-//     .get("https://63e7b432cbdc5658737be69b.mockapi.io/expenses")
-//     .then((res) => console.log(res.data))
-//     .catch((err) => console.error(err));
-// fetchExpenses();
-
 export const ExpensesReducer = async (state, action) => {
   switch (action.type) {
     case "GET": {
