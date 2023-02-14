@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { XCircleIcon } from "@heroicons/react/24/solid";
-import { ExpensesContext } from "../../context";
+// import { ExpensesContext } from "../../context";
 
 //styles
 const CartDiv = styled.div`
@@ -28,14 +28,16 @@ const CostText = styled.p`
   border-radius: 5px;
 `;
 
+function deleteHandler() {
+  console.log("you should write this function / Delete cart");
+} //??????????
+
+// const deleteHandler = (id) => {
+//   setExpensesList({ type: "DELETE", payload: { id } });
+//   console.log(id);
+// };
+
 function CartBox({ title, cost, id }) {
-  const { setExpensesList } = useContext(ExpensesContext);
-
-  const deleteHandler = (id) => {
-    setExpensesList({ type: "DELETE", payload: { id } });
-    console.log(id);
-  };
-
   return (
     <div>
       <CartDiv>

@@ -1,15 +1,17 @@
 import React from "react";
-import { useReducer } from "react";
-import { ExpensesReducer } from "../reducer";
+// import { useReducer } from "react";
+// import { ExpensesReducer } from "../reducer";
 
-export const ExpensesContext = React.createContext();
+const ExpensesContext = React.createContext();
 
-function ExpensesContextProvider({ children }) {
-  const [ExpensesList, setExpensesList] = useReducer(ExpensesReducer, []);
-  return (
-    <ExpensesContext.Provider value={{ ExpensesList, setExpensesList }}>
-      {children}
-    </ExpensesContext.Provider>
-  );
-}
-export default ExpensesContextProvider;
+// function ExpensesContextProvider({ children }) {
+//   const [ExpensesList, setExpensesList] = useReducer(ExpensesReducer, []);
+//   return (
+//     <ExpensesContext.Provider value={{ ExpensesList, setExpensesList }}>
+//       {children}
+//     </ExpensesContext.Provider>
+//   );
+// }
+// export default ExpensesContextProvider;
+
+export default ExpensesContext;

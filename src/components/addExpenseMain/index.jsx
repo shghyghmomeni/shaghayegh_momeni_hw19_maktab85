@@ -17,7 +17,9 @@ const InputDiv = styled.div`
   flex-direction: column;
 `;
 
-function saveToList() {}
+function saveToList() {
+  console.log("you should write this function / save in list");
+} //??????????
 function AddExpensesMain() {
   return (
     <div>
