@@ -2,7 +2,10 @@ import axios from "axios";
 import { BASE_URL } from "../config/linksAPI";
 
 export const GetAllExpenses = () => {
-  axios.get(BASE_URL).then((res) => res.data); //????? should completed
+  axios
+    .get(BASE_URL)
+    .then((res) => res.data)
+    .catch((err) => console.error(err)); //????? should completed
 };
 
 export const AddExpenses = (titleInputValue, costInputValue) => {
@@ -12,7 +15,10 @@ export const AddExpenses = (titleInputValue, costInputValue) => {
     id: Date.now(),
   };
 
-  axios.post(BASE_URL, newExpense).then((res) => res.data);
+  axios
+    .post(BASE_URL, newExpense)
+    .then((res) => res.data)
+    .catch((err) => console.error(err));
 };
 
 // const fetchExpenses = () => axios.get();
