@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-import ExpensesReducer from "../reducer";
+import ExpensesReducer from "../store/reducer";
 export const ExpensesContext = createContext();
 
 const ExpensesContextProvider = (props) => {
