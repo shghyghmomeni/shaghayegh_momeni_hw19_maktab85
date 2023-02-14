@@ -1,6 +1,21 @@
 import axios from "axios";
+import { BASE_URL } from "../config/linksAPI";
 
-const fetchExpenses = () => axios.get();
+export const GetAllExpenses = () => {
+  axios.get(BASE_URL).then((res) => res.data); //????? should completed
+};
+
+export const AddExpenses = (titleInputValue, costInputValue) => {
+  const newExpense = {
+    title: titleInputValue,
+    cost: costInputValue,
+    id: Date.now(),
+  };
+
+  axios.post(BASE_URL, newExpense).then((res) => res.data);
+};
+
+// const fetchExpenses = () => axios.get();
 
 // useEffect(() => {
 //   setExpensesList({ type: "GET" });
