@@ -8,7 +8,14 @@ const InputStyle = styled.input`
   border-radius: 5px;
 `;
 
-function Input({ type, placeholder }) {
-  return <InputStyle type={type} placeholder={placeholder} />;
+function Input({ name, type, placeholder, onchange }) {
+  return (
+    <InputStyle
+      name={name}
+      type={type}
+      placeholder={placeholder}
+      onChange={onchange}
+    />
+  );
 }
 export default Input;
