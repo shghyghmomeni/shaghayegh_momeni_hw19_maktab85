@@ -1,11 +1,18 @@
+@font-face {
+  font-family: "IRANsans";
+  src: url("./assets/fonts/IRANsans.eot") format("eot"),
+    url("./assets/fonts/IRANsans.woff") format("woff"),
+    url("./assets/fonts/IRANsans.ttf") format("truetype");
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #1a1a1a;
+  background-color: #f9f9f9;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,6 +36,7 @@ body {
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  font-family: IRANsans;
 }
 
 h1 {

@@ -1,0 +1,18 @@
+.container h1 {
+  font-size: 32px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.form__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  gap: 20px;
+}
+button {
+  height: 50px;
+  width: 200px;
+  align-self: center;
+}

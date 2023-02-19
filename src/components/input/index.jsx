@@ -1,21 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-
-//styles
-const InputStyle = styled.input`
-  padding: 10px 15px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-`;
-
-function Input({ name, type, placeholder, onchange }) {
+import "./style.css";
+function Input(props) {
+  const { label, name, type, id, placeholder, required } = props;
   return (
-    <InputStyle
-      name={name}
-      type={type}
-      placeholder={placeholder}
-      onChange={onchange}
-    />
+    <div className="input__field">
+      <label htmlFor={id}>{label}</label>
+      <input
+        name={name}
+        type={type}
+        id={id}
+        placeholder={placeholder}
+        required={required}
+      />
+    </div>
   );
 }
 export default Input;
